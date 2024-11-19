@@ -2,8 +2,16 @@
 
 const USERSKEY = "dashboard-user";
 export const useSave = () => {
-    const saveSate = JSON.parse(localStorage.getItem(USERSKEY));
-    const setSaveState = localStorage.setItem(USERSKEY, JSON.stringify(USERSKEY));
+    let saveSate = [];
+    let userData = localStorage.getItem(USERSKEY)
+
+    const setSaveState = (data) => (localStorage.setItem(USERSKEY, JSON.stringify(data)));
+    if (userData != null) {
+        return {
+            saveSate: JSON.parse(userData),
+            setSaveState
+        }
+    }
     return {
         saveSate,
         setSaveState
