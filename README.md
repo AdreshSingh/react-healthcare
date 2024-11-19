@@ -38,6 +38,7 @@ vite-reactjs-project/
 │   ├── components/           # Reusable components
 │   ├── pages/                # Pages of the application
 │   ├── assets/               # Static assets (images, styles, etc.)
+|   └── hooks/                # Custom hooks
 │   ├── App.jsx               # Root React component
 │   └── main.jsx              # Application entry point
 │
