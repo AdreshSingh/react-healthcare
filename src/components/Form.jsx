@@ -35,7 +35,12 @@ function Form() {
                 {/* Age */}
                 <div className="flex flex-col">
                     <label className="block font-medium text-gray-900 text-sm/6" htmlFor="p-age">Age</label>
-                    <input onInput={(e) => (setAge(e.target.value))} className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-400 sm:text-sm/6 outline-none indent-1" type="text" id="p-age" />
+                    {/* <input onInput={(e) => (setAge(e.target.value))} className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-400 sm:text-sm/6 outline-none indent-1" type="text" id="p-age" /> */}
+                    <select onInput={(e) => (setAge(e.target.value))} className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-400 sm:text-sm/6 outline-none indent-1" type="text" id="p-age" name="p-age">
+                        {
+                            Array(100).fill(101).map((_, index) => (<option key={index}>{index + 1}</option>))
+                        }
+                    </select>
                 </div>
                 {/* file */}
                 <div className="flex items-center gap-x-3">
