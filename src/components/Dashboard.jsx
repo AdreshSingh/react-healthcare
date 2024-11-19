@@ -17,12 +17,16 @@ export const Dashboard = () => {
                     <th>
                         Age
                     </th>
+                    <th>
+                        File
+                    </th>
                 </tr>
             </thead>
             {
-                saveSate.map((user, index) => (<tr key={index} className="border-b-2  even:border-gray-300">
-                    <td>{user.name}</td>
-                    <td>{user.age}</td>
+                saveSate.map((user, index) => (<tr key={index} className="border-b-2 even:border-gray-300">
+                    <td>{user?.name}</td>
+                    <td>{user?.age}</td>
+                    <td>{user?.age}</td>
                 </tr>))
             }
         </table>
